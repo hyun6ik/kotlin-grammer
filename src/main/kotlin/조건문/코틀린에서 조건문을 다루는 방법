@@ -1,0 +1,32 @@
+# 코틀린에서 조건문을 다루는 방법
+
+## Expression vs Statement
+- Statement : 프로그램의 문장, 하나의 값으로 도출되지 않는다.
+- Expression : 하나의 값으로 도출되는 문장
+
+ex) int score = 30 + 40;
+- 30 + 40은 70이라는 하나의 결과가 나온다.
+- 따라서 Expression 이면서 Statement다.
+
+ex) String grade =
+    if (score >= 50) {
+        "P";
+    else {
+        "F"
+    }
+- if문을 하나의 값으로 취급하지 않으니 에러가 발생한다.
+- Statement다.
+
+ex) String grade = score >=50 ? "P" : "F"
+- 3항 연산자는 하나의 값으로 취급하므로 에러가 발생하지 않는다.
+- Expression 이면서 Statement다.
+
+- Java에서 if-else문은 Statement 이지만
+- Kotlin에서는 Expression이다.
+
+
+1. if / if - else / if - else if - else 모두 Java 문법과 동일하다.
+ - 단 Kotlin에서는 Expression으로 취급된다.
+   - 때문에 Kotlin에서는 삼항 연산자가 없다.
+
+2. Java의 switch는 Kotlin에서 when으로 대체되었고 when은 더 강력한 기능을 갖는다.
