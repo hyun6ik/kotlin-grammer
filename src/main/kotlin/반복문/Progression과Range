@@ -1,0 +1,7 @@
+IntProgression은 등차수열을 의미한다.
+IntRange는 IntProgression을 상속받았는데 이때 기본값으로 step = 1 이라는 값을 가지고 있다.
+
+3 downTo 1 : 시작값 3, 끝값 1, 공차가 -1인 등차수열
+1..5 step 2 : 시작값 1, 끝값 5, 공차가 2인 등차수열
+
+downTo step도 함수이다. -> 중위함수
