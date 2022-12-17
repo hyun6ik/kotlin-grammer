@@ -1,0 +1,11 @@
+package 상속.Kotlin
+
+open class Base(
+    open val number: Int = 100
+) {
+
+    init {
+        println("Base Class")
+        println(number)
+    }
+}
