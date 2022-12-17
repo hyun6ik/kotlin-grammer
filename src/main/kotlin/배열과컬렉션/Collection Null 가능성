@@ -1,0 +1,5 @@
+## Collection Null 가능성
+
+List<Int?> : List에 null이 들어갈 수 있지만 리스트는 절대 null이 아니다.
+List<Int>? : List에 null이 들어갈 수 없지만 리스트는 nullable 하다.
+List<Int?>? : List에 null이 들어갈 수 있고 리스트도 nullable 하다.
