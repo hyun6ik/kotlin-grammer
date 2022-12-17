@@ -1,0 +1,1 @@
+package 접근제어.Kotlinclass Car(    internal val name: String,    private var owner: String,    _price: Int,) {    var price = _price        private set}
