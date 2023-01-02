@@ -1,0 +1,30 @@
+## ScopeFunction
+
+- 람다를 사용해 일시적인 영역을 만들고 코드를 더 간결하게 만들거나,
+    Method Chaning에 활용하는 함수를 scope funtion이라고 한다.
+
+           it 사용     this 사용
+람다의 결과     let      run
+객체 그 자체    also     apply
+             with
+
+it : 생략이 불가능한 대신, 다른 이름을 붙일 수 있다.
+this: 생략이 가능한 대신, 다른 이름을 붙일 수 없다.
+
+
+public inline fun <T,R> T.let(block: (T) -> R): R {
+    return block(this)
+}
+
+-> let은 일반 함수를 받는다.
+-> 일반함수는 파라미터를 받아서 파라미터를 함수 내부에서 호출 하기 때문에 파라미터에 대한 이름을 직접 넣어줄 수 있다.
+
+public inline fun <T,R> T.run(block: T.() -> R): R {
+    return block()
+}
+
+-> run은 확장 함수를 받는다.
+-> 확장함수에서는 본인 자신을 this로 호출하고 생략할 수 있다.
+
+
+with(파라미터, 람다) : this를 사용해 접근하고 this는 생략 가능하다.
